@@ -25,11 +25,12 @@ export default function Profile() {
       align="center"
       justify="center"
       gap="lg"
+      style={{marginTop:"80px"}}
     >
     
 
         {/* <Avatar className='Avatar' src={profileData?.avatar} alt="Couldnt find" /> */}
-      <Avatar variant="filled" radius="xl" size="xl" src={profileData?.avatar} />
+      <Avatar variant="white" radius="xl" size="xl" src={profileData?.avatar} />
         {/* <Avatar src="image.png" /> */}
         <Text className='text' tt="uppercase">{profileData?.name}</Text>
         <Text><strong> Email id: </strong>{profileData?.email}</Text>
