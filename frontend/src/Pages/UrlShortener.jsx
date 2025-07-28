@@ -1,4 +1,4 @@
-import { Button, Container, TextInput } from "@mantine/core";
+import { Button, Container, Stack, TextInput } from "@mantine/core";
 import React, { useState } from "react";
 import Service from "../utils/http";
 import Response from "../Components/Response";
@@ -28,7 +28,15 @@ export default function UrlShortener() {
   return (
     <>
       {!response ? (
-        <Container size={"xs"}>
+        <Container  >
+           <Stack
+                      
+                       bg="var(--mantine-color-body)"
+                       align="center"
+                       justify="center"
+                       gap="lg"
+                       style={{marginTop:"80px"}}
+                     >
           URL Shortener
           <TextInput
             size="lg"
@@ -49,7 +57,7 @@ export default function UrlShortener() {
             }}
           />
           <TextInput
-            size="md"
+            size="lg"
             radius="md"
             label="Title"
             //   withAsterisk
@@ -57,7 +65,7 @@ export default function UrlShortener() {
             placeholder="Input placeholder"
           />
           <TextInput
-            size="md"
+            size="lg"
             radius="md"
             type="date"
             label="Expiry Date"
@@ -74,6 +82,7 @@ export default function UrlShortener() {
           >
             Button
           </Button>
+          </Stack>
         </Container>
       ) : (
         <Response response={response} setResponse={setResponse} />
