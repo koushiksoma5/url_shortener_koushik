@@ -73,6 +73,7 @@ export default function UrlShortener() {
             description=""
             placeholder="Input placeholder"
           />
+          
           <Button
             onClick={generateShortUrl}
             variant="outline"
